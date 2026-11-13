@@ -1,0 +1,42 @@
+[project]
+name = "azimuth-optimization"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "scipy>=1.18.1",
+]
+
+
+dev = [
+    "basedpyright>=1.39.10",
+    "ruff>=0.16.4",
+]
+
+[tool.basedpyright]
+pythonVersion = "3.14"
+typeCheckingMode = "basic"
+defineConstant = { DEBUG = true }
+
+reportMissingImports = "error"
+reportMissingTypeStubs = false
+reportUnknownMemberType = false
+reportUnknownParameterType = false
+reportUnknownVariableType = false
+reportUnknownArgumentType = false
+reportAny = false
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+ignore = ["I001"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[dependency-groups]
+dev = [
+    "matplotlib>=3.11.2",
+]
